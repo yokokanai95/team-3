@@ -29,7 +29,8 @@
 
         vm.save = function () {
             vm.isSaving = true;
-            if (vm.queue.id !== null) {
+            console.log(vm.queue);
+            if (vm.queue.patient !== null) {
                 Queue.update(vm.queue, onSaveSuccess, onSaveError);
             } else {
                 Queue.save(vm.queue, onSaveSuccess, onSaveError);
